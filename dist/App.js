@@ -1,7 +1,14 @@
 "use strict";
+const path = require("path");
 const express = require("express");
 const logger = require("morgan");
 const bodyParser = require("body-parser");
+const favicon = require("serve-favicon");
+/**
+ * Routes import
+ */
+const IndexRouter_1 = require("./routes/IndexRouter");
+const HeroRouter_1 = require("./routes/HeroRouter");
 // Creates and configures an ExpressJS web server.
 class App {
     //Run configuration methods on the Express instance.
@@ -12,7 +19,10 @@ class App {
     }
     // Configure Express middleware.
     middleware() {
+        this.express.set('views', path.join(__dirname, 'views'));
+        this.express.set('view engine', 'jade');
         this.express.use(logger('dev'));
+        this.express.use(favicon(path.join(__dirname, 'public', 'favicon.ico')));
         this.express.use(bodyParser.json());
         this.express.use(bodyParser.urlencoded({ extended: false }));
     }
@@ -28,7 +38,8 @@ class App {
                 message: 'Hello World!'
             });
         });
-        this.express.use('/', router);
+        this.express.use('/', IndexRouter_1.default);
+        this.express.use('/api/v1/heroes', HeroRouter_1.default);
     }
 }
 Object.defineProperty(exports, "__esModule", { value: true });
