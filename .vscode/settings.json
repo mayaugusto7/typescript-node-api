@@ -1,3 +1,11 @@
 {
-    "vsicons.presets.angular": false
+    "vsicons.presets.angular": false,
+    "files.exclude": {
+        "**/.git": true,
+        "**/.svn": true,
+        "**/.hg": true,
+        "**/.DS_Store": true,
+        "**/dist/**/*.map": true,
+        "**/dist/routes/**/*.map": true
+    }
 }

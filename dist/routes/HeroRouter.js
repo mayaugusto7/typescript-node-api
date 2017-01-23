@@ -1,6 +1,6 @@
 "use strict";
 const express_1 = require("express");
-const Heroes = require('../data');
+const Heroes = require('../db/data');
 class HeroRouter {
     /**
     * Initialize the HeroRouter
