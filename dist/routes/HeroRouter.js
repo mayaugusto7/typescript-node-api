@@ -1,6 +1,7 @@
 "use strict";
 const express_1 = require("express");
-const Heroes = require('../db/data');
+const Heroes = require('../db/data.json');
+//const Heroes = require('../db/data.json');
 class HeroRouter {
     /**
     * Initialize the HeroRouter
@@ -42,4 +43,3 @@ const heroRoutes = new HeroRouter();
 heroRoutes.init();
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.default = heroRoutes.router;
-//# sourceMappingURL=HeroRouter.js.map

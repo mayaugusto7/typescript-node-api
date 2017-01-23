@@ -44,4 +44,3 @@ class App {
 }
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.default = new App().express;
-//# sourceMappingURL=App.js.map

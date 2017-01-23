@@ -17,4 +17,3 @@ const indexRouter = new IndexRouter();
 indexRouter.init();
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.default = indexRouter.router;
-//# sourceMappingURL=IndexRouter.js.map

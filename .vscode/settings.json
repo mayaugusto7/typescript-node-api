@@ -6,6 +6,7 @@
         "**/.hg": true,
         "**/.DS_Store": true,
         "**/dist/**/*.map": true,
-        "**/dist/routes/**/*.map": true
+        "**/dist/routes/**/*.map": true,
+        "**/*.log": true
     }
 }

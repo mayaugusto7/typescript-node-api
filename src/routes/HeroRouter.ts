@@ -1,5 +1,6 @@
 import { Router, Request, Response, NextFunction } from 'express';
-const Heroes = require('../db/data');
+const Heroes = require('../db/data.json');
+//const Heroes = require('../db/data.json');
 
 export class HeroRouter {
     router: Router;
